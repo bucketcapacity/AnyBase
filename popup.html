@@ -1,0 +1,81 @@
+<!doctype html>
+<html>
+    <head>
+        <script src = "hnum.js" charset="utf-8"></script>
+        <script src = "popup.js" charset="utf-8"></script>
+        <link rel="stylesheet" type="text/css" href="style.css">
+    </head>
+    <body>
+        <div hidden id='hackyBS'></div>
+        <!--<button id="clearDef">clearDef</button>-->
+        <h1>Any Base</h1>
+        <h5 class="warning">Warning: This is for recreational purposes only, and is not suitable for exceedingly large or precise numbers</h5>
+        <!--Test-->
+       <!-- <input type="text" id='test' name='test'><br>-->
+        <output id='testOutput'></output>
+        <!---->
+        <form id = "conversion">
+            <div class="numInput">
+            <label for="number">Number:</label><br>
+            <input class='input numDisp' type="text" id='input' name='input'/><br>
+                <!--<textarea class='input numDisp' type="text" id='input' name='input'></textarea>-->
+            </div>
+            <!--Octal was a last minute addition, 2019/5/3-->
+            <div class = "baseFromSelect">
+                <select baseSel class="selectable" id="baseFrom">
+                    <option value="custom">Custom</option>
+                    <option value="binary">Binary</option>
+                    <option value="octal">Octal</option>
+                    <option selected value="decimal">Decimal</option>
+                    <option value="dozenal">Dozenal</option>
+                    <option value="hexadecimal">Hexadecimal</option>
+                </select>
+            </div>
+            <div class = "customFrom">
+                <input class='input customIn' hidden type="text" id="customBaseFrom" name='customBaseFrom'><br>
+                <input class='input customIn' hidden type='number' id='baseFromSelected' name='baseFromSelected'><br>
+                <button class="action-button" hidden type= 'button' id = 'saveFrom'>save</button>
+            </div>
+            <div class = "baseToSelect">
+                <select baseSel class="selectable" id="baseTo">
+                    <option value="custom">Custom</option>
+                    <option value="binary">Binary</option>
+                    <option value="octal">Octal</option>
+                    <option value="decimal">Decimal</option>
+                    <option selected value="dozenal">Dozenal</option>
+                    <option value="hexadecimal">Hexadecimal</option>
+                </select>
+            </div>
+            <div class ="customTo">
+                <input class='input customIn' hidden type="text" id="customBaseTo" name='customBaseTo'><br>
+                <input class='input customIn' hidden type='number' id='baseToSelected' name='baseToSelected'><br>
+                <button class="action-button" hidden type= 'button' id = 'saveTo'>save</button>
+            </div>
+            <div hidden id='instructions'>
+                <h4 id='instDig'>Enter Digits (0123...):</h4>
+                <h4 id='instBase'>Base:</h4>
+            </div>
+            <div hidden id='enterBaseName'>
+                <h3 id='baseText'>Enter name:</h3>
+                <input class='input' type='text' id = 'baseName' name='baseName'>
+                <h5>(Press Enter when finished)</h5>
+            </div>
+            <div hidden id='overwrite'>
+                <h3>A base under this name already exists.</h3>
+                <h3>Overwrite?</h3>
+                <button class="action-button" type='button' id='yesSave'>yes</button>
+                <button class="action-button" type='button' id = 'noSave'>no</button>
+            </div>
+            <div class="output">
+                <!--<textarea hidden id='output'></textarea>-->
+                <textarea class='input numDisp' id='output'></textarea>
+            </div>
+            <div class="copy">
+                <button class="action-button" type='button' id='copy'>copy</button>
+            </div>
+            <div class="commaTog">
+                <button class="action-button" type='button' id='commaTog'>comma On/Off</button>
+            </div>
+        </form>
+    </body>
+</html>

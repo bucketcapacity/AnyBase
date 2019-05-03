@@ -1,0 +1,338 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/*********************************************/
+
+:root
+{
+    --bg-color:#eeeeee;
+    --sel-color:#f7f7f7d9;
+    --but-color:#fdfdfd6b;
+}
+
+body
+{
+    background-color:var(--bg-color);
+	padding: 10px;
+    width: 580px;
+    height: 100px;
+    font-family:sans-serif;
+}
+
+h1
+{
+    font-size:larger;
+}
+
+h3
+{
+    font-size:small;
+}
+
+h4
+{
+    font-size:smaller;
+}
+
+h5
+{
+    font-size:x-small;
+}
+
+select
+{
+    background-color: var(--sel-color);
+    /*border:none;*/
+}
+
+.input
+{
+    /*border: none;*/
+}
+
+.numInput
+{
+    /*vertical-align:baseline;*/
+    position:absolute;
+    top:45px;
+    left:10px;
+}
+
+.baseFromSelect
+{
+    position:absolute;
+    top:60px;
+    left:165px;
+    /*vertical-align:top;*/
+}
+
+.baseToSelect
+{
+    position:absolute;
+    top:60px;
+    left:280px;
+}
+
+.numDisp
+{
+    width: 140px;
+    height: 14px;
+}
+
+.customIn
+{
+    width:91px;
+}
+
+
+.customFrom
+{
+    position:absolute;
+    top:87px;
+    left:165px;
+}
+
+.customTo
+{
+    position:absolute;
+    top:87px;
+    left:280px;
+}
+
+#instructions
+{
+    position: absolute;
+    top: 92px;
+    left: 33px;
+}
+
+#instDig
+{
+    position:relative;
+    top:0px;
+    left:0px;
+}
+
+#instBase
+{
+    position:relative;
+    top: 8px;
+    left: 90px;
+}
+
+#enterBaseName
+{
+    position: absolute;
+    top: 165px;
+    left: 209px;
+}
+
+#baseName
+{
+    width:120px;
+}
+
+#overwrite
+{
+    position: absolute;
+    top: 133px;
+    left: 371px;
+}
+
+#noSave
+{
+    left:2px;
+}
+
+.output
+{
+    position:absolute;
+    top:60px;
+    left:386px;
+}
+
+.copy
+{
+    position: absolute;
+    top: 55px;
+    left: 540px;
+}
+
+#copy
+{
+    font-size: 14px;
+}
+
+.commaTog
+{
+    position: absolute;
+    top: 85px;
+    left: 386px;
+}
+
+#commaTog
+{
+    font-size:9px;
+}
+
+.warning
+{
+    color:red;
+    position:relative;
+    top:2px;
+}
+
+.animate
+{
+	transition: all 0.1s;
+	-webkit-transition: all 0.1s;
+}
+
+button
+{
+    background-color:var(--but-color);
+	position: relative;
+	padding: 5px 5px;
+    margin: 0px 2px 2px 0px;
+    float: left;
+	border-radius: 0px;
+	font-family: 'Helvetica';
+	font-size: 15px;
+	text-decoration: none;
+    border:none;
+    box-shadow:
+        0 2px 2px 0 rgba(0,0,0,0.14), 
+        0 1px 5px 0 rgba(0,0,0,0.12), 
+        0 3px 1px -2px rgba(0,0,0,0.2);
+}
+
+button:active
+{
+	transform: translate(1px,1px);
+}
+
+#testOutput
+{
+    position:absolute;
+    top:140px;
+    left:40px;
+    font-size:11px;
+}
+
+/*Options*/
+
+#euroMode
+{
+    position:absolute;
+    top:45px;
+    left:5px;
+}
+
+#clearBase
+{
+    position:absolute;
+    top:45px;
+    left:165px;
+}
+
+#clearAll
+{
+    position:absolute;
+    top:95px;
+    left:165px;
+}
+
+#advButtons
+{
+    position:absolute;
+    top:160px;
+    left:5px;
+}
+
+#advanced
+{
+    position:absolute;
+    top:200px;
+    left:5px;
+}
+
+.advBut
+{
+    font-size:12px;
+}
+
+#commas
+{
+    position:relative;
+    top:10px;
+}
+
+#baseRem
+{
+    position: relative;
+    top: 5px;
+    left: -55px;
+    width: 75px;
+}
+
+#removeButton
+{
+    position: relative;
+    left: 75px;
+    top: 3px;
+    font-size: 12px;
+}
+
+footer
+{
+    position:absolute;
+    bottom:20px;
+    font-size:11px;
+}
+

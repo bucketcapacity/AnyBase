@@ -1,0 +1,55 @@
+<!doctype html>
+<html>
+    <head>
+        <script src = "options.js" charset="utf-8"></script>
+        <link rel="stylesheet" type="text/css" href="style.css">
+    </head>
+    <body>
+        <h1>Options</h1>
+        <div id = "euroMode">
+            <input type = 'checkbox' id='euro'>European Mode<br>
+        </div>
+        <div id = "clearBase">
+            <h3>Remove Base:</h3>
+            <select id='baseRem'> <!-- I wanted this to be mulitple, but I can't implement correctly-->
+            </select>
+            <button id='removeButton'>remove</button>
+        </div>
+        <div id = 'clearAll'>
+            <button type=button id="clearMem">clear all saved bases</button>
+            <div hidden id='areYouSure'>
+                <h3>Are you sure?</h3>
+                <button type=button id = "imSure">Yes</button>
+                <button type=button id = "notSure">No</button>
+            </div>
+        </div>
+        <div id = "advButtons">
+        <button class="advBut" id='showAdvanced'>Advanced Options</button>
+        <button class ="advBut" hidden id='hideAdvanced'>Hide Advanced Options</button>
+        </div>
+        <div hidden id = 'advanced'>
+            <div dozenal>
+                <h2>Dozenal characters</h2>
+                <select id='dozChar'>
+                    <option selected id='pitman' value = 'pitman'>Pitman</option>
+                    <option id='dwiggins' value = 'dwiggins'>Dwiggins</option>
+                </select>
+            </div>
+            <div id = "commas">
+                <h2>Commas</h2>
+                <h3>On/Off</h3>
+                <select id = 'commaAl'>
+                    <option selected value='matchIn'>Match Input</option>
+                    <option value='commaOff'>Always Off</option>
+                    <option value='commaOn'>Always On</option>
+                </select>
+                <h3>Comma Location</h3>
+                <input type = 'number' id = 'commaLoc'>
+            </div>
+        </div>
+    </body>
+    <footer>
+        &#169; 2019 Jens Dienst<br>
+        Donate: JensDienst.eth (0x3f46b9A163297E9c6706A3c4AfD2c726CFA20AAb)
+    </footer>
+</html>
